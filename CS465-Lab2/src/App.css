@@ -1,60 +1,40 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* 
+AUTHOR - Matt Eagan
+FILE - App.css
+PROJECT - Lab 2
+COURSE - CS-465: Full-Stack Development
+INSTRUCTOR - Charles Palmer
+DUE DATE - 10/13/2025  
+*/
+
+body {
+  display: flex;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+header {
+  display:inline-flex;
+  background-color:#233445;
+  width:100%;
+  height:60px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+img.MenuIcon {
+  width:100px;
+  position:relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */
-
-div {
+div { /* global div stylization */
   display:block;
 }
 
-div.map {
+div.map { /* map div stylization */
   width:100%;
 }
 
-.leaflet-container {
-  width:600px;
-  height:600px;
-  /* width:device-width;
-  height:device-height; */
+.leaflet-container { /* map display stylization */
+  width:100%;
+  height:100dvh;
   position:absolute;
-    top:0;
-    left:25%;
+    top: 0;
+    left:0;
 }
