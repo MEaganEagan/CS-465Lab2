@@ -7,28 +7,87 @@ INSTRUCTOR - Charles Palmer
 DUE DATE - 10/14/2025  
 */
 
-body {
+#map { /* map div stylization */
+  width:100%;
+}
+
+#mapModalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: #66666680;
+  color: #171717;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
 }
 
-header {
-  display:inline-flex;
-  background-color:#233445;
-  width:100%;
-  height:60px;
+#mapModal {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
 }
 
-img.MenuIcon {
-  width:100px;
-  position:relative;
+#resetButton {
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: end;
+  z-index: 2000;
 }
 
-div { /* global div stylization */
-  display:block;
+#listButton {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: end;
+  z-index: 2000;
 }
 
-div.map { /* map div stylization */
-  width:100%;
+#markerReset {
+  background-color: #66666685;
+  border-width: 2px;
+  border-color: #171717;
+  color:#171717;
+}
+
+#listShow {
+  background-color: #66666685;
+  border-width: 2px;
+  border-color: #171717;
+  color:#171717;
+}
+
+#markerListPanel {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: #f5f5f585;
+  color:#171717;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  z-index: 1500;
+  width: 250px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.markerItem {
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.formInput {
+  width: 95%;
+  padding: 6px;
+  margin-top: 4px;
+  margin-bottom: 8px;
 }
 
 .leaflet-container { /* map display stylization */
@@ -37,4 +96,6 @@ div.map { /* map div stylization */
   position:absolute;
     top: 0;
     left:0;
+
+  z-index: 1;
 }
