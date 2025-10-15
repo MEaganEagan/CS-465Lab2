@@ -1,16 +1,40 @@
-# React + Vite
+# Lab 2: Oh, The Places You've Been!
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+- Your Name: Matt Eagan
+- GitHub Username: MEaganEagan
+- Repository URL: https://github.com/MEaganEagan/CS465-Lab2
+- Date Submitted: 2025-10-14
+- Collaborators: Charles C. Palmer [Instructor]
+- Comments: The completed assignment's functionality includes:
+                * A dynamic map that can resize and displays well on mobile devices
+                * Markers created by double-clicking anywehre on the map (double-tapping on mobile)
+                * The ability to delete markers by right-clicking (multi-touching on mobile)
+                * The ability to edit created markers by double-clicking on a marker (double-tapping on mobile) [EXTRA]
+                * The ability to move created markers by clicking and dragging [EXTRA]
+                * An expandible list of all markers that a user creates [EXTRA]
+                * A buttton that removes all created markers at once
+            
+            Various jsx tips and knowledge surrounding functions was adopted from a Southern New Hampshire University Lecture hosted by Charles C. Palmer
+            Leaflet Map styling functions were sourced from the Open-Source Leaflet docs: https://leafletjs.com/reference.html
+            Leaflet container and map functionality setup sourced from this examples in this repository by GitHub user ms-aija: https://github.com/ms-aija/LeafletReact5minDemo?tab=readme-ov-file
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    # WHAT WORKED
+            Setting the map up in my project came very quickly and I am pleased with the functionality and the customization of controls I accomplished.
+            The controls for creating and modifying markers on the map were kept very simple and the user interface appears very lightweight and effective
+            Iterating through the marker objects and indexing came very easily following in-class lectures on jsx as well as my previous courses in data structures.
+    # WHAT DIDN'T WORK
+            The z-index of the map container defaults to a strange value, causing any UI elements I drew to appear behind the map container. A large chunk of my development time was sunk into resolving this issue.
+            As this is the first Vite project I have launched on render.com, I ran into some trouble deploying my site. Render was searching in the \src directory for the package.json file, despite it appearing in the root directory. I additionally had to modify and re-commit my project as the Gitignore prevented Render from seeing the \dist directory.
+            Despite appearing correct on my local project, upon deploying my site, the markers on the map do not correctly load their icons. Potentially clearing the build cache and re-deploying could remedy this, despite all other functionality working correctly.
 
-## React Compiler
+            If I had more time before the deadline for this project I would have considered:
+                * Adding animations to the retractible list
+                * Allowing users to customize icons or upload images for each marker they create
+                * Changed the map tile layer to a satellite rather than the current road-map tiles
+                * Included a header with a fancy logo that can adapt to mobile devices
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+I maintain that all code submitted to this project was solely wrote by me to the best of my current ability and knowledge.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
